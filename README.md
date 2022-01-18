@@ -39,30 +39,30 @@ SIM92=new("actuarialtable",x=demoIta$X[0:110],lx=demoIta$SIM92[0:110],interest=0
   
 Exn(SIM92,x=25,n=65-25)
 
-#### [1] 0.2490894
+Ans= 0.2490894
 
 ### How much should a 25-year-old policyholder pay to receive $100,000 when he turns 65 or when he dies?
 
 AExn(SIM92,x=25,n=65-25)
 
-#### [1] 0.3309626
+Ans= 0.3309626
 
 
 Exn(SIM92,x=25,n=65-25)+Axn(SIM92,x=25,n=65-25)
 
-#### [1] 0.3309626
+Ans= 0.3309626
 
 ### On the SOA actuarial table, calculate the APV whole life insurance for a policyholder aged 30 with benefit payable at the end of month of death at a 4% interest rate,
 
 Axn(soa08Act, x=30,i=0.04,k=12)
 
-#### [1] 0.2004297
+Ans= 0.2004297
 
 ### For the APV calculated in Exercise 7.16, determine the level benefit premium assuming it will be paid until the policyholder's death
 
 Axn(soa08Act, x=30,i=0.04,k=12)/axn(soa08Act, x=30,k=0.04)
 
-#### [1] 0.006495519
+Ans= 0.006495519
 
 ### Calculate the quarterly premium that a policyholder aged 50 will pay until the year of death to insure a face value of $100,000. The face value will be paid at the end of the quarter of death.
 
@@ -78,7 +78,7 @@ Pm=Pa/12 #montly benefit premium
 
 Pm
 
-#### [1] 73.10392
+Ans= 73.10392
 
 ### Calculate the reserve at time 4 for life insurance on a policyholder aged 60 paid with five yearly premiums as long as the policyholder is alive from year.
 
@@ -88,7 +88,7 @@ V4=Axn(soa08Act, 60+4) - P*axn(soa08Act, 60+4,5-4)
 
 V4
 
-#### [1] 0.3401786
+Ans= 0.3401786
 
 ### For a 20 year term life insurance on a (75) year policiholder calculate V(5)
 
@@ -100,7 +100,7 @@ V=Axn(soa08Act, x=75+5,n=20-5)-P*axn(soa08Act, 75+5,20-5)
 
 V
 
-#### [1] 0.1708723
+Ans= 0.1708723
 
 ### Calculate the benefit reserve at time 10 for whole life insurance on 60 payable at the end of year of death with benefit premiums paid quarterly.
 
@@ -112,7 +112,7 @@ V=Axn(soa08Act,x=60+10)-P*axn(soa08Act, x=60+10,k=4)
 
 V
 
-#### [1] 0.2341824
+Ans= 0.2341824
 
 ### Calculate the benefit reserve for a 20-year endowment on a policyholder aged 60 at time 10 assuming level benefit premiums to be paid for 15 years
 
@@ -124,4 +124,4 @@ V=AExn(soa08Act, 60+10,20-10)-P*axn(soa08Act, 60+10,15-10)
 
 V
 
-#### [1] 0.4346281
+Ans= 0.4346281
